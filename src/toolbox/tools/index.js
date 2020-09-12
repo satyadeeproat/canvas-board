@@ -1,5 +1,5 @@
 import React from "react";
-import allTools from "../../utils/tools-list";
+import {allTools} from "../../utils/tools-list";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Tools = ({ activeTool, setActiveTool }) => {

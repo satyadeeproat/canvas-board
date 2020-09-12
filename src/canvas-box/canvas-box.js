@@ -8,9 +8,6 @@ const CanvasBox = React.forwardRef((props, ref) => {
         width={500}
         height={500}
         ref={ref}
-        onPointerMove={draw}
-        onPointerDown={startDrawing}
-        onPointerUp={finishDrawing}
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
         onMouseMove={draw}

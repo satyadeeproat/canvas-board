@@ -4,7 +4,7 @@ import LeftBox from './toolbox/left-box';
 import RightBox from './colors';
 import CanvasBox from './canvas-box/canvas-box';
 import colors from './utils/colors';
-import allTools from './utils/tools-list';
+import {allTools, toolsName} from './utils/tools-list';
 import strokes from './utils/stroke-list';
 
 function App() {
@@ -52,9 +52,14 @@ function App() {
    * Set stroke size 5px for highlighter
    */
   useEffect(() => {
-    if(allTools[activeTool].name === 'highlighter') {
-      setActiveStroke(2);
-    } 
+    let selectedTool = allTools[activeTool].name;
+    switch(selectedTool) {
+      case toolsName.TOOL_HIGHLIGHTER.name: {
+        setActiveStroke(2);
+        break;
+      }
+      default: ;
+    }
   }, [activeTool]);
 
 
@@ -65,15 +70,24 @@ function App() {
    */
   const startDrawing = ({nativeEvent}) => {
     const {offsetX: x, offsetY: y} = nativeEvent;
-    if(allTools[activeTool].name === 'eraser') {
-      contextRef.current.clearRect(0, 0, contextRef.current.lineWidth, contextRef.current.lineWidth);
-    } else if(allTools[activeTool].name === 'pen') {
-      contextRef.current.beginPath();
-      contextRef.current.moveTo(x, y);
-    } else {
-      contextRef.current.globalAlpha = 0.5;
-      coordinates.current.x = x;
-      coordinates.current.y = y;
+    let selectedTool = allTools[activeTool].name;
+    switch(selectedTool) {
+      case toolsName.TOOL_PEN.name: {
+        contextRef.current.beginPath();
+        contextRef.current.moveTo(x, y);
+          break;
+      }
+      case toolsName.TOOL_HIGHLIGHTER.name: {
+        contextRef.current.globalAlpha = 0.5;
+        coordinates.current.x = x;
+        coordinates.current.y = y;
+        break;
+      }
+      case toolsName.TOOL_ERASER.name: {
+        contextRef.current.clearRect(0, 0, contextRef.current.lineWidth, contextRef.current.lineWidth);
+        break;
+      }
+      default: ;
     }
     setIsDrawing(true);
   }
