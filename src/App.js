@@ -26,7 +26,7 @@ function App() {
     canvas.height = window.innerHeight*2;
     canvas.style.width = `${window.innerWidth}px`;    
     canvas.style.height = `${window.innerHeight}px`;
-
+    canvas.style.touchAction = "none";
     const context = canvas.getContext('2d');
     context.scale(2,2);
     context.strokeStyle = colors[0];
