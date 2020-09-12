@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/canvas-board/static/css/main.8478e2c2.chunk.css",
-    "main.js": "/canvas-board/static/js/main.713283f1.chunk.js",
-    "main.js.map": "/canvas-board/static/js/main.713283f1.chunk.js.map",
+    "main.js": "/canvas-board/static/js/main.b3df429c.chunk.js",
+    "main.js.map": "/canvas-board/static/js/main.b3df429c.chunk.js.map",
     "runtime-main.js": "/canvas-board/static/js/runtime-main.1e370a3a.js",
     "runtime-main.js.map": "/canvas-board/static/js/runtime-main.1e370a3a.js.map",
     "static/js/2.857d4db6.chunk.js": "/canvas-board/static/js/2.857d4db6.chunk.js",
     "static/js/2.857d4db6.chunk.js.map": "/canvas-board/static/js/2.857d4db6.chunk.js.map",
     "index.html": "/canvas-board/index.html",
-    "precache-manifest.05992629748c84a534a54ff63ca0ea9b.js": "/canvas-board/precache-manifest.05992629748c84a534a54ff63ca0ea9b.js",
+    "precache-manifest.f6276be78c72c5a261efb310e2964312.js": "/canvas-board/precache-manifest.f6276be78c72c5a261efb310e2964312.js",
     "service-worker.js": "/canvas-board/service-worker.js",
     "static/css/main.8478e2c2.chunk.css.map": "/canvas-board/static/css/main.8478e2c2.chunk.css.map",
     "static/js/2.857d4db6.chunk.js.LICENSE.txt": "/canvas-board/static/js/2.857d4db6.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1e370a3a.js",
     "static/js/2.857d4db6.chunk.js",
     "static/css/main.8478e2c2.chunk.css",
-    "static/js/main.713283f1.chunk.js"
+    "static/js/main.b3df429c.chunk.js"
   ]
 }
